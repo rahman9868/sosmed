@@ -1,0 +1,3 @@
+include ':sosmed'
+include ':app'
+rootProject.name = "libs"
