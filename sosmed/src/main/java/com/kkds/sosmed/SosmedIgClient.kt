@@ -27,8 +27,9 @@ public class SosmedIgClient {
 
     lateinit var instaClient: InstaClient
 
-    fun SosmedIgClient(context: Context, username: String, password: String){
-        instaClient = InstaClient(context, username, password)
+    fun sosmedIgInstance(context: Context, username: String, password: String) : SosmedIgClient{
+        this.instaClient = InstaClient(context, username, password)
+        return SosmedIgClient()
     }
 
     fun login(): Observable<IGLoginResponse> {
