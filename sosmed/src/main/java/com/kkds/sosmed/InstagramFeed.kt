@@ -8,11 +8,25 @@ data class InstagramFeed(
         val username : String,
         val profilePic : String,
         val caption: String?,
-        val url: String,
+        val media: List<MediaFeed>,
         val devTime : Long,
         val height: Int,
         val width : Int,
         val likeCount: Int
+
+)
+
+data class MediaFeed(
+        val id: String,
+        val mediaType: Int,
+        val url: String
+
+)
+
+data class BigUserInstagram(
+        val pk: Long,
+        val urlProfile : String,
+        val username: String
 
 )
 
